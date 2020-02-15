@@ -1,0 +1,36 @@
+<div align="center">
+    <h2>Register</h2>
+    <form id="login_form">
+        <div class="form-group col-sm-4 center-form-group">
+            <label for="name">Name</label>
+            <input type="text" required placeholder="Enter the name" name="name" [(ngModel)]="userObj.name" class="form-control">
+        </div>
+        <div class="form-group col-sm-4 center-form-group ">
+            <label for="email">Email ID</label>
+            <input type="text" required placeholder="Enter the email" name="email" [(ngModel)]="userObj.emailid"
+                class="form-control">
+        </div>
+        <div class="form-group col-sm-4 center-form-group">
+            <label for="Username">Username</label>
+            <input type="text" required placeholder="Enter the Username" name="uname" [(ngModel)]="userObj.id"
+                class="form-control">
+        </div>
+        <div class="form-group col-sm-4 center-form-group">
+            <label for="Password">Password</label>
+            <input type="password" required placeholder="Enter the Password" name="pwd" [(ngModel)]="userObj.pwd"
+                class="form-control">
+        </div>
+        <div class="form-group col-sm-4 center-form-group">
+            <label>Repeat Password</label>
+            <br>
+            <div class="form-label-group">
+                <input type="password" id="UserId" name="Password" class="form-control" name="Password"
+                    placeholder="Enter the password" [(ngModel)]="repeatPwd" required>
+            </div>
+        </div>
+        <div class="form-group col-sm-4 center-form-group">
+        <button [disabled]="!(repeatPwd == userObj.pwd)" (click)="register()" class="btn btn-success btn-block">Register</button>
+    </div>
+    </form>
+</div>
+
